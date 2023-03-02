@@ -53,14 +53,14 @@ class _SplashScreenState extends State<SplashScreen> {
       color: Colors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          FlutterLogo(
+        children: [
+          const FlutterLogo(
             size: 100,
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          CircularProgressIndicator(),
+          _loadingData ? const CircularProgressIndicator() : const SizedBox(),
         ],
       ),
     );
